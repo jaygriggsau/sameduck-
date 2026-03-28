@@ -42,6 +42,12 @@ Open `http://localhost:3000`.
 
 ## Deploy (Vercel)
 
-1. Create a Vercel project pointing at `layflat/`
-2. Add env vars from `.env.example`
-3. Ensure `NEXT_PUBLIC_APP_URL` matches your deployed domain (needed for webhooks)
+The Git repository root is **one folder above** the Next.js app. In Vercel go to **Project → Settings → General → Root Directory**, set it to **`layflat`**, save, and **redeploy**. Leave the framework preset as **Next.js** (auto-detected from `layflat/package.json`). Do **not** leave root directory as `.` — there is no `package.json` at the repo root.
+
+Then:
+
+1. Add all env vars from **`.env.example`** (Production + Preview as needed).
+2. Set **`NEXT_PUBLIC_APP_URL`** to your real site URL (e.g. `https://your-app.vercel.app` or `https://sameduck.com`) — no trailing slash.
+3. Link **Vercel Blob** so **`BLOB_READ_WRITE_TOKEN`** exists in production.
+4. Run **`npm run db:migrate`** against your production `DATABASE_URL` once.
+5. Open the **Deployment** URL from the Vercel dashboard (Production). A generic **404 NOT_FOUND** with an `syd1::` id usually means a **wrong or expired URL**, or the **last deploy failed** — check **Deployments → Build Logs**.
