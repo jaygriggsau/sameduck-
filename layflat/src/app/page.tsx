@@ -16,12 +16,15 @@ export default async function Home() {
 
       {/* ── Nav ── */}
       <header className="sticky top-0 z-40 border-b border-zinc-100 bg-white/90 pt-safe backdrop-blur-sm">
-        <div className="mx-auto flex h-14 min-[430px]:h-16 w-full max-w-6xl items-center justify-between px-safe sm:px-6">
+        <div className="mx-auto flex min-h-14 w-full max-w-6xl items-center justify-between py-2 min-[430px]:min-h-16 px-safe sm:px-6">
           <div className="flex min-w-0 items-center gap-4 min-[430px]:gap-8">
-            <Link href="/" className="flex min-w-0 items-center gap-2">
+            <Link href="/" className="flex shrink-0 items-center" aria-label="Same Duck home">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/same-duck-logo.png" alt="Same Duck" className="size-7 shrink-0 rounded-md object-cover" />
-              <span className="truncate text-sm font-bold tracking-tight text-zinc-900">Same Duck</span>
+              <img
+                src="/same-duck-logo.png"
+                alt="Same Duck"
+                className="h-10 w-auto max-w-[11rem] object-contain object-center"
+              />
             </Link>
             <nav className="hidden items-center gap-6 sm:flex">
               <a href="#how-it-works" className="text-sm text-zinc-500 hover:text-zinc-900">How it works</a>
@@ -409,10 +412,13 @@ export default async function Home() {
       {/* ── Footer ── */}
       <footer className="border-t border-zinc-100 bg-white px-safe pb-safe pt-8 sm:px-6">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/same-duck-logo.png" alt="Same Duck" className="size-4 rounded object-cover" />
-            <span className="text-sm font-semibold text-zinc-900">Same Duck</span>
+            <img
+              src="/same-duck-logo.png"
+              alt="Same Duck"
+              className="h-8 w-auto max-w-[9rem] object-contain opacity-90"
+            />
           </div>
           <div className="flex max-w-[20rem] flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-zinc-500 min-[430px]:max-w-none">
             <a href="#how-it-works" className="hover:text-zinc-900">How it works</a>

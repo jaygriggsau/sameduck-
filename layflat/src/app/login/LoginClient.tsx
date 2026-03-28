@@ -66,10 +66,13 @@ export default function LoginClient() {
     <div className="flex min-h-full flex-1">
       {/* Left panel – marketing */}
       <div className="hidden flex-1 flex-col justify-between bg-zinc-900 p-10 lg:flex">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex shrink-0 items-center" aria-label="Same Duck home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/same-duck-logo.png" alt="Same Duck" className="size-7 rounded-md object-cover" />
-          <span className="text-sm font-bold text-white">Same Duck</span>
+          <img
+            src="/same-duck-logo.png"
+            alt="Same Duck"
+            className="h-10 w-auto max-w-[11rem] object-contain brightness-110"
+          />
         </Link>
         <div className="max-w-sm space-y-4">
           <h2 className="text-3xl font-bold leading-tight text-white">
@@ -102,10 +105,13 @@ export default function LoginClient() {
         <div className="w-full max-w-sm">
           {/* Mobile logo */}
           <div className="mb-8 flex items-center justify-between lg:hidden">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex shrink-0 items-center" aria-label="Same Duck home">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/same-duck-logo.png" alt="Same Duck" className="size-7 rounded-md object-cover" />
-              <span className="text-sm font-bold text-zinc-900">Same Duck</span>
+              <img
+                src="/same-duck-logo.png"
+                alt="Same Duck"
+                className="h-10 w-auto max-w-[11rem] object-contain"
+              />
             </Link>
             <Link href="/" className="text-xs text-zinc-500 hover:text-zinc-700">
               ← Back

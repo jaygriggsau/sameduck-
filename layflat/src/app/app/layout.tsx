@@ -17,13 +17,16 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     <div className="flex min-h-full flex-col bg-zinc-50">
       {/* ── Top nav ── */}
       <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white/95 pt-safe backdrop-blur-sm">
-        <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-2 px-safe sm:h-16 sm:gap-4 sm:px-6">
+        <div className="mx-auto flex min-h-14 w-full max-w-6xl items-center justify-between gap-2 py-2 min-[430px]:min-h-16 px-safe sm:gap-4 sm:px-6">
           {/* Logo + nav */}
           <div className="flex items-center gap-6">
-            <Link href="/app" className="flex items-center gap-2">
+            <Link href="/app" className="flex shrink-0 items-center" aria-label="Same Duck — Projects">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/same-duck-logo.png" alt="Same Duck" className="size-7 rounded-md object-cover" />
-              <span className="hidden text-base font-semibold tracking-tight text-zinc-900 min-[420px]:inline">Same Duck</span>
+              <img
+                src="/same-duck-logo.png"
+                alt="Same Duck"
+                className="h-10 w-auto max-w-[11rem] object-contain object-center"
+              />
             </Link>
             <nav className="hidden items-center gap-1 sm:flex">
               <Link
@@ -62,10 +65,13 @@ export default async function AppLayout({ children }: { children: React.ReactNod
       {/* ── Footer ── */}
       <footer className="border-t border-zinc-200 bg-white px-safe py-5 pb-safe sm:px-6">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/same-duck-logo.png" alt="Same Duck" className="size-4 rounded object-cover" />
-            <span className="text-xs font-semibold text-zinc-500">Same Duck</span>
+            <img
+              src="/same-duck-logo.png"
+              alt="Same Duck"
+              className="h-7 w-auto max-w-[7.5rem] object-contain opacity-80"
+            />
           </div>
           <div className="text-xs text-zinc-400">AI fashion photoshoots</div>
         </div>
