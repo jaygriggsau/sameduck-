@@ -1,0 +1,10 @@
+---
+description: Git repo layout and publishing for Same Duck / sameduck
+alwaysApply: true
+---
+
+- **Git repository root:** `d:\layFlat` (parent folder). The Next.js app lives in **`layflat/`**.
+- Run **`git status`**, **`git add`**, **`git commit`**, **`git push`** from **`d:\layFlat`**, not only from `layflat/`.
+- **Vercel:** set project **Root Directory** to **`layflat`**.
+- **Never** commit secrets: `.env.local`, `.env*.local`, real API keys, or `node_modules` (respect `.gitignore`).
+- **Publish changes:** `git add -A` → `git commit -m "…"` → `git push origin main`. If the user asks to sync GitHub, use these steps; `git push` may require their local GitHub auth once.
